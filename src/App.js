@@ -1,12 +1,16 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import UserDetail from "./components/UserDetail";
-import UserDetails from "./components/UserDetails";
-import User from "./components/User"
+import User from "./components/User";
+
 function App() {
   return (
-    <>
-   <User/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<User/>} />
+        <Route path="/user-detail" element={<UserDetail/>} />
+      </Routes>
+    </Router>
   );
 }
 
